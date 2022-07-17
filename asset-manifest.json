@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lightbulb/static/css/main.73ed7330.css",
+    "main.js": "/lightbulb/static/js/main.ee8c531c.js",
+    "index.html": "/lightbulb/index.html",
+    "main.73ed7330.css.map": "/lightbulb/static/css/main.73ed7330.css.map",
+    "main.ee8c531c.js.map": "/lightbulb/static/js/main.ee8c531c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73ed7330.css",
+    "static/js/main.ee8c531c.js"
+  ]
+}

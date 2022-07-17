@@ -5,7 +5,6 @@
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -23,24 +22,6 @@ code {
   justify-content: space-between;
   min-height: 100vh;
 }
-
-img {
-  background-color: aliceblue;
-  height: 50px;
-  width: 50px;
-}
-
-/* img:first-of-type {
-  left: 5px;
-  position: fixed;
-  top: 5px;
-}
-
-img:last-of-type {
-  right: 5px;
-  position: fixed;
-  top: 5px;
-} */
 
 article {
   align-items: center;

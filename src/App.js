@@ -4,6 +4,11 @@ import { TbBulb, TbBulbOff, TbCookie } from 'react-icons/tb';
 function App() {
 
   const [isOn, setIsOn] = useState(true);
+  const [isCookiePressed, setIsCookiePressed] = useState(false);
+
+  if (isCookiePressed) {
+    throw new Error('Don\'t touch it. It\'s for Christmas.');
+  };
 
   const bgColor = isOn ? 'white' : 'black';
   const color = isOn ? 'black' : 'white';
@@ -18,19 +23,28 @@ function App() {
     setIsOn(isOn => !isOn);
   };
 
+  const handleCookieSwitch = () => {
+    setIsCookiePressed(true);
+  };
+
   return (
     <div className="App" style={{ background: bgColor, color: color }}>
-      <span>
-        {
-          isOn ? (
-            <TbBulb style={iconStyle} onClick={handleSwitch} />
-          ) : (
-            <TbBulbOff style={iconStyle} onClick={handleSwitch} />
-          )
-        }
-      </span>
-      <article>
+      <header>
+        <span>
+          {
+            isOn ? (
+              <TbBulb style={iconStyle} onClick={handleSwitch} />
+            ) : (
+              <TbBulbOff style={iconStyle} onClick={handleSwitch} />
+            )
+          }
+        </span>
         <h1>I</h1>
+        <span>
+          <TbCookie style={iconStyle} onClick={handleCookieSwitch} />
+        </span>
+      </header>
+      <article>
         <p>The Salinas Valley is in Northern California. It is a long narrow swale between two ranges of mountains, and the Salinas River winds and twists up the center until it falls at last into Monterey Bay.
           <br />
           <br />
@@ -40,9 +54,6 @@ function App() {
           I remember that the Gabilan Mountains to the east of the valley were light gay mountains full of sun and loveliness and a kind of invitation, so that you wanted to climb into their warm foothills almost as you want to climb into the lap of a beloved mother. They were beckoning mountains with a brown grass love. The Santa Lucias stood up against the sky to the west and kept the valley from the open sea, and they were dark and brooding — unfriendly and dangerous. I always found in myself a dread of west and a love of east. Where I ever got such an idea I cannot say, unless it could be that the morning came over the peaks of the Gabilans and the night drifted back from the ridges of the Santa Lucias. It may be that the birth and death of the day had some part in my feeling about the two ranges of mountains.
         </p>
       </article>
-      <span>
-        <TbCookie style={iconStyle} />
-      </span>
     </div>
   );
 }

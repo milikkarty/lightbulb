@@ -18,17 +18,16 @@ code {
 }
 
 .App {
-  display: flex;
-  justify-content: space-between;
   min-height: 100vh;
 }
 
-article {
+header {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
-article h1 {
-  margin: 15px 0;
+article {
+  margin: 15px auto;
+  width: 80%;
 }

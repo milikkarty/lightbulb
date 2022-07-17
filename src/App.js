@@ -7,12 +7,15 @@ function App() {
 
   const [isOn, setIsOn] = useState(true);
 
+  const bgColor = isOn ? 'white' : 'black';
+  const color = isOn ? 'black' : 'white';
+
   const handleSwitch = () => {
     setIsOn(isOn => !isOn);
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ background: bgColor, color: color }}>
         <img
           src={isOn ? bulbOn : bulbOff}
           alt={isOn ? "Light is on." : "Light is off."}
